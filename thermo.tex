@@ -1,0 +1,80 @@
+\documentclass[epjST]{svjour}
+%
+\usepackage{graphics}
+%
+\begin{document}
+%
+\title{Finite-time thermodynamics: problems, methods, results}
+\author{A.M. Tsirlin\inst{1}\fnmsep\thanks{\email{tsirlin@sarc.botik.ru}} \and I.A. Sukin\inst{2}\fnmsep\thanks{\email{muspellsson@undeadbsd.org}} }
+%
+\institute{Program Systems Institute of RAS, Pereslavl-Zalessky,  Russia}
+%
+\abstract{
+Insert your abstract here.
+} %end of abstract
+%
+\maketitle
+%
+\section{Introduction}
+\label{intro}
+The development of thermodynamics, beginning from the Carnot’s work, is closely linked with extremal problems considering limiting capabilities of thermodynamical systems. If Carnot had posed the heat engine’s maximal COP (coefficient of performance) problem mathematically strict: ''To find such a law $T(t)$ of the working body’s temperature changing, that a ratio $\rho$ of the obtained work to the heat taken from the hot source would be maximal, where the heat engine takes the heat from the source with the temperature $T_+$ and gives it to the source with the temperature $T_-$'', he would not have got the solution of this problem. That is because the duration of the cycle $\tau$ is one of the sought-for variables in the given problem. The set of admissible values for this variable is bounded only by the non-negativity condition and therefore this set is not closed. Hence, according to the Weierstrass theorem (which Carnot could not know about) the problem may have no solutions. Really, the maximum of $\rho$ does not exist. The upper bound of the COP (supremum) is reached in a limit as $\tau$ approaches the infinity.
+
+This characteristic turned to be typical for many others extremal thermodynamical problems (problem of minimal mixture separation work, problem of maximal COP for systems with sources of the finite capacity). The classical solution of these problems gives reversible processes in which exchange flows are close to zero, so the exchange of the finite amount of a matter or an energy takes an infinite amount of time.
+
+We must note that the Carnot's heat engine may have the finite power output, but only in the case when coefficients of the heat exchange between heat sources and the working body of the heat engine are arbitrarily large. In this case the Carnot COP is the ratio between the ''reversible power output'' and the flow of the heat taken from the hot source.
+\subsection*{The history of the finite-time thermodynamics}
+''The problem of the maximal power output'' seems to be the first problem of the finite-time thermodynamics. This problem considers such form of the heat engine cycle that engine's power output would be maximal\cite{Nov}\cite{CurAhl} and others.
+
+\section{Section title}
+\label{sec:1}
+and \cite{RefJ}
+\subsection{Subsection title}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+%
+
+\begin{figure}
+% Use the relevant command for your figure-insertion program
+% to insert the figure file.
+% For example, with the option graphics use
+%\resizebox{0.75\columnwidth}{!}{%
+%  \includegraphics{fig1.eps} }
+\caption{Please write your figure caption here.}
+\label{fig:1}       % Give a unique label
+\end{figure}
+%
+% For tables use
+\begin{table}
+\caption{Please write your table caption here.}
+\label{tab:1}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{lll}
+\hline\noalign{\smallskip}
+first & second & third  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+number & number & number \\
+number & number & number \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+%
+\begin{thebibliography}{}
+% and use \bibitem to create references.
+\bibitem{Nov}
+Novikov I.I., \textit{The efficiency of atomic power stations}, J. Nuclear Energy, \textbf{II 7}, (1958) 25--128
+\bibitem{CurAhl}
+Curzon F.L., Ahlburn B., \textit{Efficiency of a Carnot engine at maximum power output}, Amer. J. Physics, \textbf{43}, (1975) 22--24
+\bibitem{RefJ}
+% Format for Journal Reference
+Author, Journal \textbf{Volume}, (year) page numbers
+% Format for books
+\bibitem{RefB}
+Author, \textit{Book title} (Publisher, place year) page numbers
+% etc
+\end{thebibliography}
+
+\end{document}
+
+% end of file template.tex
+
