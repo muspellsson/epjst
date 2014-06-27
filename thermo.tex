@@ -25,6 +25,41 @@ We must note that the Carnot's heat engine may have the finite power output, but
 \subsection*{The history of the finite-time thermodynamics}
 ''The problem of the maximal power output'' seems to be the first problem of the finite-time thermodynamics. This problem considers such form of the heat engine cycle that engine's power output would be maximal\cite{Nov}\cite{CurAhl} and others.
 
+This problem was very actual for the newborn atomic energetics in 1950s, because the cost price of nuclear power plants were high and the fuel cost was relatively small. Getting the maximal power output was far more important than getting the maximal COP in these conditions.
+
+The problem of the maximal power output considers heat and power flows instead of the heat amount and the work. The heat exchange kinetics, coefficients of the heat exchange between the working body and sources are also taken into account. Authors of the above-mentioned books and many other studies often solved this problem independently but using the same scheme:
+
+\begin{enumerate}
+\item Flows of the heat exchange for the contact with every source were assumed to be proportional to the difference of the source and the working body temperatures (Newtonian kinetics).
+\item The sought-for cycle assumed to be analogous the Carnot cycle: it consists of two isotherms and two adiabats, and temperatures of the working body contact with sources were selected using the condition of maximal power output in respect with the energy conservation law and the fact that the flow of the entropy coming from the hot source must be equal to the flow of the entropy given to the cold source. The latter condition means that processes inside of the working body were assumed to be reversible.
+
+It turned up to be that the maximal power output of the heat engine, contacting with reservoirs having temperatures $T_+$ and $T_-$ is
+\begin{equation}
+N_{max} = \frac{\alpha_1\alpha_2}{\alpha_1+\alpha_2}\left(\sqrt{T_+}-\sqrt{T_-}\right)^2,
+\end{equation}
+where $\alpha_1$ and $\alpha_2$ are the coefficients of the heat exchange for the contact with sources. The COP of the cycle for the maximal power output does not depend on the heat exchange coefficients and is equal to
+\begin{equation}
+\eta = 1 - \sqrt{\frac{T_-}{T_+}}
+\end{equation}
+
+\end{enumerate}
+
+These works did not answer the following questions:
+\begin{enumerate}
+\item Which kinetics of the heat exchange gives the cycle of the maximal power output, consisting of two isotherms and two adiabats?
+\item Is the COP of a such cycle always independent of the heat exchange coefficients?
+\item What is the form of the heat engine cycle, maximizing theCOP for the given power output.
+\end{enumerate}
+
+These questions were answered in \cite{RosTs}\cite{BeKaSi} using the techniques of the average optimization developed in \cite{Ts1}.
+
+It turned up that
+\begin{enumerate}
+\item The cycle consists of two isotherms and two adiabats for every kinetics satisfying the condition of the equality of the heat flow direction and the sign of the difference between temperatures of contacting bodies.
+\item The COP corresponding to such cycle depends on kinetics coefficients, in the most general case.
+\item The cycle of the heat engine with the maximal COP for the given power output consists of no more than three isotherms and three adiabats. The condition for which the number of isotherms is exactly two was also obtained.
+\end{enumerate}
+
 \section{Section title}
 \label{sec:1}
 and \cite{RefJ}
@@ -65,6 +100,12 @@ number & number & number \\
 Novikov I.I., \textit{The efficiency of atomic power stations}, J. Nuclear Energy, \textbf{II 7}, (1958) 25--128
 \bibitem{CurAhl}
 Curzon F.L., Ahlburn B., \textit{Efficiency of a Carnot engine at maximum power output}, Amer. J. Physics, \textbf{43}, (1975) 22--24
+\bibitem{RosTs}
+Rozonoer L.I., Tsirlin A.M., \textit{Optimal control of thermodynamical systems}, Automatics and Telemechanics, \textbf{1, 2, 3}, (1983), in Russian
+\bibitem{BeKaSi}
+Berry R.S., Kazakov V.A., Sieniutycz S., Szwast Z., Tsirlin A.M., \textit{Thermodynamic Optimization of Finite Time Processes}, (Wiley, Chichester 1999)
+\bibitem{Ts1}
+Tsirlin A.M., \textit{Techniques of the average optimization and its applications}, (Moscow, Fizmatlit 1997), in Russian
 \bibitem{RefJ}
 % Format for Journal Reference
 Author, Journal \textbf{Volume}, (year) page numbers
