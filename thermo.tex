@@ -82,7 +82,7 @@ Here comes the question: for which systems power output is upper-bounded and for
 
 \paragraph{Problem 4.} How one must organize the thermodynamical processes in order to get the minimum entropy producion for the given average intensity of the process (processes of minimum dissipation).
 
-\paragraph{In particular}, how can we estimate the heat exchange process? How the heat exchange process of two vector flows must be organized in order to get the minimum entropy production for the given heat capacity and the total heat exchange coefficient?
+\paragraph{In particular,} how can we estimate the heat exchange process? How the heat exchange process of two vector flows must be organized in order to get the minimum entropy production for the given heat capacity and the total heat exchange coefficient?
 
 \paragraph{Problem 5.} To plot the region of attainable modes of the thermodynamical system. The axes values are intensities of flows.
 
@@ -107,6 +107,58 @@ The third and the most difficult step is the solution of the problem of such pro
 In the complex system the total dissipation additively depends on the dissipation of each elementary process. So the important stage of the analysis is the finding of minimum dissipation conditions. The optimal processes organization in the complex system are reduced to the coordination of separate minimum dissipation processes.
 
 \subsection{Thermodynamical balance relations}
+
+Thermodynamical balance relations are the system of equations of the matter, energy and entropy balances. For the simplicity we will look at these equations for the open system. The left part of thermodynamical balance equations is zero in the stationary mode. Some flows are incoming to the system from the environment and some ones are created inside the system. One of these created flows is the entropy production, which is always non-negative. This turns the entropy balance equation into the inequality. Together with other equations it allocates the attainability region in the flow space. The bound of this region corresponds to reversible processes. But if we can solve the problem of finding the minimum entropy production $\sigma_{min}$ then balance equations with the condition $\sigma \geq \sigma_{min}$ allocates the region which bound corresponds to the processes of minimum dissipation. This region is included into the region bounded by reversible processes. Now we will examine it more closely.
+
+\paragraph{Open system.} Thermodynamical balance equations determines relations between flows of each substance, energy and entropy, which are exchanged within the system and with environment. They also helps to figure out the relation between flow production and the speed of their changing. We will sum up all the flows, considering incoming flows as positive and outgoing ones as negative. Distinguishing flows as convective and diffusive we will denote latter ones with the index $d$. Unlike the convective flow the diffusive one depends on the difference between intensive variables of the system studied at the point where this flows comes in or goes out and intensive variables of the environment. We will use following denotations: $j$ --- flow index, $c_j$, $v_j$ --- internal energy of the flow and it's molar volume, $P_j$ --- pressure of the flow, $h_j = e_j + P_j v_j$ --- molar enthalpy, $h_{dj}$ --- enthalpy of the diffusive flow, $q_j$ --- heat flow, $N_a$ --- power output of the system.
+
+The general form of balance equations is
+\begin{equation}
+\frac{dE}{dt} = \sum_j{g_j h_j} + \sum_j{q_{dj}} + \sum_j{q_j} - N_a,
+\label{BalMat}
+\end{equation}
+\begin{equation}
+\frac{dN_i}{dt} = \sum_j{g_j x_{ij}} + \sum_j{g_{dj} x_{dj}} + \sum_{\nu} {\alpha_{i\nu} W_{\nu}},
+\label{BalEne}
+\end{equation}
+\begin{equation}
+\frac{dS}{dt} = \sum_j{g_j s_j} + \sum_j{\frac{q_{dj} - \sum_i{g_{dj} \mu_{dij}}}{T_{dj}}} + \sum_{i\nu}{\frac{\mu_{i\nu}n_{i\nu}}{T_{\nu}}} + \sum_j{\frac{q_j}{T_j}} + \sigma.
+\label{BalEnt}
+\end{equation}
+Where $n_{i\nu} = -\alpha_{i\nu}W_{\nu}$ is the intensity of the $i$-th substance production in the $\nu$-th reaction, $T_{\nu}$ is the temperature in the $\nu$-th reaction. If there is no diffusive flows:
+\begin{equation}
+\frac{dE}{dt} = \sum_j{g_j h_j} + \sum_j{q_j} - N_a,
+\label{BalMatNoD}
+\end{equation}
+\begin{equation}
+\frac{dN_i}{dt} = \sum_j {g_j x_{ij}} + \sum_{\nu}{\alpha_{i\nu}W_{\nu}},
+\label{BalEneNoD}
+\end{equation}
+\begin{equation}
+\frac{dS}{dt} = \sum_j{g_j s_j} + \sum_j{\frac{q_j}{T_j}} + \sum_{i\nu}{\frac{\mu_{i\nu}n_{i\nu}}{T_{\nu}}} + \sigma,
+\label{BalEntNoD}
+\end{equation}
+where heat flows produced or consumed during chemical reactions are among other heat flows. These flows depends on the reaction speed.
+
+Assuming the process is in the stationary mode, where $\frac{dE}{dt} = \frac{dN_i}{dt} = \frac{dS}{dt} = 0$, one can rewrite the differential relations of thermodynamical balances as simple finite relations. Balances can be written not for every moment of time but in average for the overall time, if the process is cyclic. Because states of the system are identical at the start and at the end of every cycle, overall variation of the energy, the substances amount and the entropy is zero. Balances in this case are reduced to the system of relations bounding average values of right parts of equations.
+
+For closed systems, consisting of several equilibrium subsystems thermodynamical balances are
+\[
+\dot{E_0} = \sum_i{\dot{E_i}},
+\]
+\[
+\dot{N_0} = \sum_i{\dot{N_i}},
+\]
+\[
+\dot{S_0} = \sum_i{\dot{S_i}},
+\]
+where $i$ is the number of the subsystem and the index zero corresponds to the system at a whole. $\dot{E_i}$, $\dot{N_i}$ and $\dot{S_i}$ are determined by (\ref{BalMat})--(\ref{BalEnt}).
+
+Fig.\ref{fig1} show flow schemes for some thermodynamical systems, and the table \ref{tab1} shows the relation between the capability value and the entropy production. It is easy to see, that with the increase of $\sigma$ the capability is decreased.
+
+\section{Some results}
+
+\subsection*{Minimum dissipation processes}
 %\section{Section title}
 %\label{sec:1}
 %and \cite{RefJ}
@@ -161,16 +213,15 @@ Andresen B., Salamon P., Berry R.S. \textit{Thermodynamics in finite time}, Phys
 Andresen B., Salamon P., Berry R.S., \textit{Thermodynamics in finite time: extremals for imperfect heat engines}, J. Chem. Phys., \textbf{64 4}, (1977), 1571--1577
 \bibitem{And}
 Andresen B., \textit{Finite-time thermodynamics}, (Copenhagen, 1983)
+\bibitem{TsMir}
+Tsirlin A.M., Mironova V.A., Amelkin S.A., Kazakov V.A., \textit{Finite-time thermodynamics: Conditions of minimal dissipation for thermodynamic process with given rate}, Physical Review, \textbf{58 1}, (1998)
+\bibitem{TsKaz}
+Tsirlin A.M., Kazakov V.A., \textit{Maximal work problem in finite-time thermodynamics}, Physical Review, \textbf{1}, (2000)
+\bibitem{TsGrig}
+Tsirlin A.M., Grigorevsky I.N., \textit{Thermodynamical estimation of the limit capacity of irreversible binary distillation}, J. Non-Equilibrium Thermodynamics, \textbf{35}, (2010), 213--233
+\bibitem{Ts2}
+Tsirlin A.M., \textit{Mathematical models and optimal processes in macrosystems}, (Moscow, Science 2006), in Russian
 
-
-
-\bibitem{RefJ}
-% Format for Journal Reference
-Author, Journal \textbf{Volume}, (year) page numbers
-% Format for books
-\bibitem{RefB}
-Author, \textit{Book title} (Publisher, place year) page numbers
-% etc
 \end{thebibliography}
 
 \end{document}
