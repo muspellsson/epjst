@@ -1,6 +1,7 @@
 \documentclass[epjST]{svjour}
 %
 \usepackage{graphics}
+\usepackage{amsmath}
 %
 \begin{document}
 %
@@ -159,6 +160,106 @@ Fig.\ref{fig1} show flow schemes for some thermodynamical systems, and the table
 \section{Some results}
 
 \subsection*{Minimum dissipation processes}
+
+The requirement of the minimum of the entropy production in processes of a given intensity leads to the problem of such process organization that gives this minimum entropy production value. For the scalar case the formulation of the problem is following.
+
+Two bodies characterized by their extensive variables $Y$ (volume, internal energy, entropy, amount of substance) and intensive ones $u$ (temperature, composition, pressure) are contacting. The difference between intensive variables generates the exchange flow $J$. The entropy increase for the time $L$ is equal to the an integral of a product of the flow value $J$ and the driving force $X$, which depends on intensive variables too. $J$ and $X$ always have the same sign. The dissipation is the average increase rate of the entropy. Intensive variables depend on extensive ones according to the state equation. We will assume that the intensive variable $u_2$ of the second contacting system can be changed optimally and $u_1$ is changed under the influence of the exchange flow. The average value of the flow is given. Then the problem takes the following form:
+\begin{equation}
+\bar{\sigma} = \frac{1}{L}\int\limits_0^L{J(u_1,u_2)X(u_1,u_2)dl} \rightarrow \min\limits_{u_2 \in V}
+\label{MinDis}
+\end{equation}
+under conditions
+\begin{equation}
+\frac{du_1}{dl} = \varphi(u_1, u_2),\quad u_1(0) = u_{10},
+\label{MinDisCond1}
+\end{equation}
+\begin{equation}
+\frac{1}{L}\int\limits_0^L{J(u_1, u_2)dl} = \bar{J}.
+\label{MinDisCond2}
+\end{equation}
+The value of $L$ can be either given or optimally selected.
+
+Optimality conditions for this problem and the optimality conditions for vector flows with Onsager kinetics are given in \cite{TsMir}, \cite{TsKaz}.
+
+For the most important case when
+\begin{equation}
+\varphi(u_1, u_2) = c(u_1)J(u_1, u_2)
+\label{MinDisImpCond}
+\end{equation}
+we will get
+\begin{equation}
+J^2(u_1, u_2)= \lambda_2\left(\frac{\partial J(u_1, u_2)}{\partial u_2}:\frac{\partial X(u_1, u_2)}{\partial u_2}\right).
+\label{MinDisImp}
+\end{equation}
+
+More specific conditions of the minimum dissipation for some kinds of processes are given in the table \ref{tab2}.
+
+%\begin{table}
+%\begin{tabular}{|l|l|l|}
+%\hline\noalign{\smallskip}
+%Process & Minimum dissipation conditions & Minimum entropy producion\\ \hline\noalign{\smallskip}
+%Heat exchange for two flows $q = \alpha(T_2-T_1)$ & $\frac{T_1(f)}{T_2(f)} = 1 - \frac{\beta}{\alpha F}$ & \\ \hline\noalign{\smallskip}
+%\end{tabular}
+%\caption{Minimum dissipation conditions for thermodynamical processes}
+%\label{tab2}
+%\end{table}
+
+\subsection*{The form of the attainability region}
+
+Assuming the processes organization in the system corresponds to minimum dissipation conditions and the entropy production $\sigma_{min}$ bounds the attainability region in the flow space, the following is correct\cite{TsGrig}:
+
+\textit{If the capacity of the system depends on the flow of electric or mechanical power, or the flow of separation power and the costs flow in monotonously dependent of the heat flow, then attainability region in the space ''capacity--costs'' is upper-bound.}
+
+\textit{Otherwise, if the capacity is determined by the heat flow and costs are determined by the electric or mechanical power, the capacity is monotonously increasing with the increase of costs.}
+
+Systems of the first kind are heat engines, distillation processes, absorption refrigerators etc. The ones of the second kind are compression refrigerators, heat pumps, electric heaters.
+
+\subsection*{The problem of the maximum work}
+
+We have some heterogeneous thermodynamic system consisting of several subsystems (reservoirs, subsystems of finite capacity), which intensive variables are different at the initial time. There is the working body in the system, which can contact with any subsystem. The function $U(t)$ is one if there is a contact and zero if the is not one. In this case heat and mass transfer coefficients are bounded. We need to organize contacts of the working body with subsystems in a way to get the maximum work for the given time $\tau$. The work is equal to the internal energy, and because the initial state is given, the goal is to maximally minimize the internal energy within the given time. It is usually assumed that the state of the working body are the same at the beginning and at the end of the process.
+
+Solving this problem we can deduce these two statements\cite{Ts2}:
+
+\paragraph{Statement 1:} In the thermodynamical system consisting of reservoirs and the working body with the given initial state, for any laws of a heat and mass transfer, the maximum work for the time $\tau$ is given by the process for which:
+
+\begin{itemize}
+\item The vector of intensive variables $u$ and contact functions $U$ on the interval $(0, \tau)$ is piece-wise constant, and the number of values it can take is not greater than $r+m+2$, where $r$ is the number of conditions on the final state of subsystems, $m$ is the dimension number of the concentration vector;
+\item Intensive variables are changed abruptly to some optimal conditions corresponding to optimal pressures, at the beginning and at the end of the process;
+\item The entropy of the system is the piese-wise linear funcion, increasing at the interval $(0, \tau)$.
+\end{itemize}
+
+Depending on given boundary conditions the maximum can be less or greater than zero. In the former case it corresponds to the minimum of the expended work.
+
+This structure of the optimal process is characteristic for any heat and mass transfer kinetics.
+
+\paragraph{Consequence:} When there are no boundary conditions on the composition, the entropy of the working body and increase rates of extensive reservoirs for $t=\tau$, the entropy of the system in the optimal process increases with the constant rate for any laws of heat and mass transfer and the working body is contacting with the same reservoirs during the whole process.
+
+If there are finite-capacity subsystems instead of reservoirs, the problem of the maximum work becomes the problem of the optimal control with the integral variables $U(t)$. And there is the \textbf{Statement 2:} \textit{On each interval on the contact function constancy the law of the intensive variable $u(t)$ vector changing in the optimal process must satisfy conditions of the minimum dissipation.}
+
+\subsection*{The optimal organization of heat exchanging systems}
+
+The minimum entropy production corresponds to such organization of the process, when at each point of the system the ratio $m$ of absolute temperatures of the heat and cold flow is the same as the temperature $\bar{T}$ of cold flows at the exit of the system is, in heat exchanging systems with multiple flows, given temperatures, water equivalents of hot flows, the total heat transfer coefficient and the heat capacity for the linear heat exchange law.
+
+So, the following is assumed
+\[
+\begin{cases}
+\bar{T} = \frac{\sum\limits_i{T_{i0}W_i}-\bar{q}}{\sum\limits_i{W_i}},\\
+q^*(T_{i0}) = W_i(T_{i0} - \bar{T}),\\
+\alpha^*(T_{i0}) = \frac{\bar{\alpha}W_i(\ln{T_{i0}}-\ln{\bar{T}})}{\sum\limits_i{W_i(\ln{T_{i0}}-\ln{\bar{T}})}},\\
+m = 1 - \frac{1}{\bar{\alpha}}\sum\limits_i{W_i(\ln{T_{i0}}-\ln{\bar{T}})},\\
+\bar{\sigma}^* = \bar{\alpha}\frac{(1-m)^2}{m},\\
+\alpha^*(T_{i0}) = q^*(T_{i0}) = W_i = 0,\quad T_{i0} \leq \bar{T}.
+\end{cases}
+\]
+Where $T_{i0}$, $W_{i0}$ --- the temperature and the water equivalent of the $i$-th flow, $q$ --- the heat flow, $\sigma$ --- the entropy production, $\bar{\alpha}$ --- the total transfer coefficient. The latter inequality says that the hot flows with the temperature less than $\bar{T}$ must be excluded from the system.
+
+\section*{Conclusion}
+
+Given examples illustrate the nature of optimization thermodynamics results, but does not give the full and evidential explanation.
+
+Because flows depend on intensive variables of subsystems and the changing rate of extensive variables is determined by the intensity of flows, there are a lot of problems with state variables not included in the right parts of differential equations (Lyapunov equations). These problems are reduced to problems of average optimization.
+
+Not all the problems of the optimization thermodynamics are solved. The one of the unsolved problems is the problem of minimum dissipation conditions for vector flows with the kinetics different from Onsager one.
 %\section{Section title}
 %\label{sec:1}
 %and \cite{RefJ}
